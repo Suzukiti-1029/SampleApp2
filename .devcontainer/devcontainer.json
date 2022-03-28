@@ -1,0 +1,11 @@
+{
+  "name": "SampleApp2",
+  "dockerComposeFile": ["./docker-compose.yml"],
+  "service": "tomcat",
+  "workspaceFolder": "/usr/local/tomcat/",
+  "forwardPorts": [8080],
+  "extensions": [
+    "vscjava.vscode-java-pack",
+    "formulahendry.vscode-mysql",
+  ]
+}

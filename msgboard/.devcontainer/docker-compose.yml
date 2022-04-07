@@ -1,0 +1,18 @@
+version: '3'
+services:
+
+  mysql:
+    image: mysql:5.7
+    container_name: msgboard-mysql-docker
+    environment:
+      MYSQL_ROOT_PASSWORD: '256133'
+    ports:
+      - "3306:3306"
+
+  tomcat:
+    build: ./
+    container_name: msgboard-tomcat-docker
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/Users/suzukiti/dev/SampleApp2/msgboard:/usr/local/tomcat/webapps/msgboard"

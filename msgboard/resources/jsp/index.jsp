@@ -7,7 +7,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>index</title>
-  <link rel="stylesheet" type="text/css" href="/SampleApp2/resources/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/msgboard/resources/css/stylesheet.css">
 </head>
 <body>
   <h1>Index</h1>

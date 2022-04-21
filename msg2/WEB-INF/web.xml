@@ -50,4 +50,13 @@
     <servlet-name>Sample3_1</servlet-name>
     <url-pattern>/Sample3_1</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Sample4_1</servlet-name>
+    <servlet-class>Sample4_1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sample4_1</servlet-name>
+    <url-pattern>/Sample4_1</url-pattern>
+  </servlet-mapping>
 </web-app>

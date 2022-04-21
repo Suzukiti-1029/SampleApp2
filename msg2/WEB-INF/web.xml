@@ -42,4 +42,12 @@
     <url-pattern>/Sample2_3</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>Sample3_1</servlet-name>
+    <servlet-class>Sample3_1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sample3_1</servlet-name>
+    <url-pattern>/Sample3_1</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -1,0 +1,15 @@
+h1 {
+  color: #07b;
+  border-bottom: 1px solid #08a;
+}
+table {
+  background-color: #9af;
+}
+table th {
+  font-weight: bold;
+  color: white;
+  background-color: #5af;
+}
+table td {
+  background-color: white;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "SampleApp2",
+  "dockerComposeFile": ["./docker-compose.yml"],
+  "service": "tomcat",
+  "workspaceFolder": "/usr/local/tomcat/webapps/msg2/",
+  "forwardPorts": [8080],
+  "extensions": [
+    "vscjava.vscode-java-pack", // Java全般
+    "formulahendry.vscode-mysql", // MYSQL
+    "pthorsson.vscode-jsp", // JSP用
+    "streetsidesoftware.code-spell-checker", // スペルミス防止
+    "mhutchie.git-graph", // Git見やすく
+    "eamodio.gitlens-insiders", // Git見やすく
+    "oderwat.indent-rainbow", // インデントわかりやすく
+    "mosapride.zenkaku", // 不必要なミス防止
+  ]
+}

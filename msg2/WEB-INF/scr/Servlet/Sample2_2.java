@@ -1,3 +1,4 @@
+package Servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -7,15 +8,15 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-// @WebServlet("Sample2_1")
-public class Sample2_1 extends HttpServlet {
+// @WebServlet("Sample2_2")
+public class Sample2_2 extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response)
   throws IOException, ServletException {
-    String name = request.getParameter("name");
+    String color = request.getParameter("color");
 
     PrintWriter out = response.getWriter();
-    out.println("Hello" + name);
+    out.println("<p style=\"color:" + color + "\">" + color + "</p>");
     out.close();
   }
 }

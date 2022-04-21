@@ -8,55 +8,67 @@
 
   <servlet>
     <servlet-name>Sample</servlet-name>
-    <servlet-class>Sample</servlet-class>
+    <servlet-class>Servlet.Sample</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>Sample2_1</servlet-name>
+    <servlet-class>Servlet.Sample2_1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Sample2_2</servlet-name>
+    <servlet-class>Servlet.Sample2_2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Sample2_3</servlet-name>
+    <servlet-class>Servlet.Sample2_3</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Sample3_1</servlet-name>
+    <servlet-class>Servlet.Sample3_1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Sample4_1</servlet-name>
+    <servlet-class>Servlet.Sample4_1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Session1_1</servlet-name>
+    <servlet-class>Session.Session1_1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Session2_1</servlet-name>
+    <servlet-class>Session.Session2_1</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>Sample</servlet-name>
     <url-pattern>/Sample</url-pattern>
   </servlet-mapping>
-
-  <servlet>
-    <servlet-name>Sample2_1</servlet-name>
-    <servlet-class>Sample2_1</servlet-class>
-  </servlet>
   <servlet-mapping>
     <servlet-name>Sample2_1</servlet-name>
     <url-pattern>/Sample2_1</url-pattern>
   </servlet-mapping>
-
-  <servlet>
-    <servlet-name>Sample2_2</servlet-name>
-    <servlet-class>Sample2_2</servlet-class>
-  </servlet>
   <servlet-mapping>
     <servlet-name>Sample2_2</servlet-name>
     <url-pattern>/Sample2_2</url-pattern>
   </servlet-mapping>
-
-  <servlet>
-    <servlet-name>Sample2_3</servlet-name>
-    <servlet-class>Sample2_3</servlet-class>
-  </servlet>
   <servlet-mapping>
     <servlet-name>Sample2_3</servlet-name>
     <url-pattern>/Sample2_3</url-pattern>
   </servlet-mapping>
-
-  <servlet>
-    <servlet-name>Sample3_1</servlet-name>
-    <servlet-class>Sample3_1</servlet-class>
-  </servlet>
   <servlet-mapping>
     <servlet-name>Sample3_1</servlet-name>
     <url-pattern>/Sample3_1</url-pattern>
   </servlet-mapping>
-
-  <servlet>
-    <servlet-name>Sample4_1</servlet-name>
-    <servlet-class>Sample4_1</servlet-class>
-  </servlet>
   <servlet-mapping>
     <servlet-name>Sample4_1</servlet-name>
     <url-pattern>/Sample4_1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Session1_1</servlet-name>
+    <url-pattern>/Session1_1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Session2_1</servlet-name>
+    <url-pattern>/Session2_1</url-pattern>
   </servlet-mapping>
 </web-app>

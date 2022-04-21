@@ -10,10 +10,36 @@
     <servlet-name>Sample</servlet-name>
     <servlet-class>Sample</servlet-class>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>Sample</servlet-name>
     <url-pattern>/Sample</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Sample2_1</servlet-name>
+    <servlet-class>Sample2_1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sample2_1</servlet-name>
+    <url-pattern>/Sample2_1</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Sample2_2</servlet-name>
+    <servlet-class>Sample2_2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sample2_2</servlet-name>
+    <url-pattern>/Sample2_2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Sample2_3</servlet-name>
+    <servlet-class>Sample2_3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sample2_3</servlet-name>
+    <url-pattern>/Sample2_3</url-pattern>
   </servlet-mapping>
 
 </web-app>

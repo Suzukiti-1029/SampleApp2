@@ -1,3 +1,4 @@
+package Servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -7,14 +8,15 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-// @WebServlet("/Sample")
-public class Sample extends HttpServlet {
+// @WebServlet("Sample2_1")
+public class Sample2_1 extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response)
   throws IOException, ServletException {
-    PrintWriter out = response.getWriter();
+    String name = request.getParameter("name");
 
-    out.println("Hello Servlet");
+    PrintWriter out = response.getWriter();
+    out.println("Hello" + name);
     out.close();
   }
 }

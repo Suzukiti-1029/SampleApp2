@@ -30,6 +30,10 @@
     <servlet-name>Sample4_1</servlet-name>
     <servlet-class>Servlet.Sample4_1</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>Session1_1</servlet-name>
+    <servlet-class>Session.Session1_1</servlet-class>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>Sample</servlet-name>
@@ -54,5 +58,9 @@
   <servlet-mapping>
     <servlet-name>Sample4_1</servlet-name>
     <url-pattern>/Sample4_1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Session1_1</servlet-name>
+    <url-pattern>/Session1_1</url-pattern>
   </servlet-mapping>
 </web-app>

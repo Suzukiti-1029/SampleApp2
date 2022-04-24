@@ -17,7 +17,7 @@
 </head>
 <body>
   <h1>Index</h1>
-  <form action="send.jsp" method="post">
+  <form action="/msgboard/add" method="post">
     タイトル：<br>
     <input type="text" name="title" /><br>
     メッセージ：<br>

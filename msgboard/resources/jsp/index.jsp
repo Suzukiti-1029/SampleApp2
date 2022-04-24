@@ -34,7 +34,7 @@
       <%= new SimpleDateFormat("yyyy/MM/dd HH:ss:mm").format(msg.getDate()) %>
       <%= msg.getTitle() %>
       <div>
-        <%= msg.getContents() %>
+        <%= msg.getContents().replace("\n", "<br>") %>
       </div>
     </div>
   <% } %>

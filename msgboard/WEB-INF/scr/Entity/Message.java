@@ -16,4 +16,14 @@ public class Message {
   private Date date;
   private String title;
   private String contents;
+
+  public Date getDate() {
+    return date;
+  }
+  public String getTitle() {
+    return title;
+  }
+  public String getContents() {
+    return contents;
+  }
 }

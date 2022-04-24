@@ -2,6 +2,10 @@
 <%-- 文字コード(エンコーディング)を指定(文字化け防止) --%>
 <% request.setCharacterEncoding("UTF-8"); %>
 
+<%@ page import="java.util.Date" %>
+<%@ page import="Repository.MessageDao" %>
+<%@ page import="Entity.Message" %>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,13 +16,18 @@
 <body>
   <h1>Send</h1>
   <% 
+    Date date = new Date();
     // 入力値を受け取る
     String title = request.getParameter("title");
     String contents = request.getParameter("contents");
+
+    Message msg = new Message(date, title, contents);
+    MessageDao dao = new MessageDao();
+
+    dao.save(msg);
   %>
   
-  <%= title %><br>
-  <%= contents %><br>
+  <p>保存完了</p>
   <a href="index.jsp">戻る</a>
 </body>
 </html>

@@ -25,6 +25,7 @@
     MessageDao dao = new MessageDao();
 
     dao.save(msg);
+    response.sendRedirect("index.jsp");
   %>
   
   <p>保存完了</p>

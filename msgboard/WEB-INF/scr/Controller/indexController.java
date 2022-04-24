@@ -9,17 +9,19 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/add")
-public class addController extends HttpServlet {
+@WebServlet("/index")
+public class indexController extends HttpServlet {
   @Override
-  public void doPost(HttpServletRequest request, HttpServletResponse response)
+  public void doGet(HttpServletRequest request, HttpServletResponse response)
   throws IOException, ServletException {
     response.setContentType("text/html; charset=UTF-8");
     request.setCharacterEncoding("UTF-8");
 
     messageService service = new messageService();
-    service.addMessages(request);
+    service.getMessages(request);
 
-    response.sendRedirect("/msgboard/index");
+    getServletContext()
+      .getRequestDispatcher("/resources/jsp/index.jsp")
+        .forward(request, response);
   }
 }

@@ -5,7 +5,6 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
 <%@ page import="java.util.List" %>
-<%@ page import="Repository.MessageDao" %>
 <%@ page import="Entity.Message" %>
 
 <!DOCTYPE html>
@@ -18,16 +17,15 @@
 <body>
   <h1>Index</h1>
   <form action="/msgboard/add" method="post">
-    タイトル：<br>
+    <div>タイトル：</div>
     <input type="text" name="title" /><br>
-    メッセージ：<br>
+    <div>メッセージ：</div>
     <textarea name="contents"></textarea><br>
     <button>click</button>
   </form>
 
   <%
-    MessageDao dao = new MessageDao();
-    List<Message> messages = dao.select();
+    List<Message> messages = (List<Message>)request.getAttribute("messages");
   %>
   <% for(Message msg: messages) { %>
     <div>

@@ -45,7 +45,7 @@
     </tr>
   </table>
 
-  <a href="/shop/resources/jsp/cashresister/index.jsp">レジへ</a>
+  <a href="/shop/cashresister/index">レジへ</a>
 </body>
 
 </html>

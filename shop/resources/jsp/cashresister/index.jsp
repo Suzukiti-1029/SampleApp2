@@ -48,8 +48,8 @@
     </tr>
   </table>
 
-  <a href="/shop/resources/jsp/cart/index.jsp">戻る</a>
-  <a href="/shop/resources/jsp/cashresister/create.jsp">支払い</a>
+  <a href="/shop/cart/index">戻る</a>
+  <a href="/shop/cashresister/create">支払い</a>
 </body>
 
 </html>

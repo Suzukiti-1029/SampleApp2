@@ -16,7 +16,7 @@
   <p>ご購入ありがとうございました！</p>
   <p>合計金額：300円</p>
 
-  <a href="/shop/resources/jsp/cart/index.jsp">戻る</a>
+  <a href="/shop/cart/index">戻る</a>
 </body>
 
 </html>

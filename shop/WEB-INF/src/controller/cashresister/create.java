@@ -1,4 +1,4 @@
-package cashresister.controller;
+package controller.cashresister;
 
 import java.io.IOException;
 

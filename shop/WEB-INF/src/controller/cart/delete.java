@@ -1,4 +1,4 @@
-package cashresister.controller;
+package controller.cart;
 
 import java.io.IOException;
 
@@ -8,18 +8,18 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/cashresister/index")
-public class index extends HttpServlet {
+@WebServlet("/cart/delete")
+public class delete extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response)
   throws IOException, ServletException {
     response.setContentType("text/html; charset=UTF-8");
     request.setCharacterEncoding("UTF-8");
 
-    // 処理
+    String id = request.getParameter("id");
 
-    getServletContext()
-      .getRequestDispatcher("/resources/jsp/cashresister/index.jsp")
-        .forward(request, response);
+    System.out.println("商品ID: " + id);
+
+    response.sendRedirect("index");
   }
 }

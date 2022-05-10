@@ -44,6 +44,19 @@ public class CartService {
     session.setAttribute("cartItemsMap", cartItemsMap);
   }
 
+  public void deleteCartItem() {
+    String id = request.getParameter("id");
+    Map<String, CartItem> cartItemsMap = getCartItemsAsMap();
+
+    CartItem cartItem = cartItemsMap.get(id);
+    if (cartItem != null) {
+      cartItemsMap.remove(id);
+    }
+
+    HttpSession session = request.getSession(true);
+    session.setAttribute("cartItemsMap", cartItemsMap);
+  }
+
 
   // Use session to retrieve items in the current cart and return them in a map
   private Map<String, CartItem> getCartItemsAsMap() {

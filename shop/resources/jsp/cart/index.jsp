@@ -53,7 +53,7 @@
         </td>
         <td>
           <!-- ショッピングカートをクリア -->
-          <a href="delete?id=1">クリア</a>
+          <a href="delete?id=<%= item.getId() %>">クリア</a>
         </td>
       </tr>
     <% } %>

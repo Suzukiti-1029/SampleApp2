@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.util.List" %>
+<%@ page import="entity.Item" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 
 <!DOCTYPE html>
@@ -13,6 +15,7 @@
 <body>
   <h1>Index</h1>
 
+  <% List<Item> items = (List<Item>)request.getAttribute("items"); %>
   <table>
     <tr>
       <th>商品名</th>
@@ -21,28 +24,30 @@
       <th>カートへ移動</th>
       <th>カートクリア</th>
     </tr>
-    <tr>
-      <td>
-        <!-- 商品名を出力 -->
-        お茶
-      </td>
-      <td>
-        <!-- 価格を出力 -->
-        100円
-      </td>
-      <td>
-        <!-- 個数を出力 -->
-        3個
-      </td>
-      <td>
-        <!-- ショッピングカートへ追加 -->
-        <a href="add?id=1">追加</a>
-      </td>
-      <td>
-        <!-- ショッピングカートをクリア -->
-        <a href="delete?id=1">クリア</a>
-      </td>
-    </tr>
+    <% for(Item item: items) { %>
+      <tr>
+        <td>
+          <!-- 商品名を出力 -->
+          <%= item.getName() %>
+        </td>
+        <td>
+          <!-- 価格を出力 -->
+          <%= item.getPrice() %>円
+        </td>
+        <td>
+          <!-- 個数を出力 -->
+          3個
+        </td>
+        <td>
+          <!-- ショッピングカートへ追加 -->
+          <a href="add?id=1">追加</a>
+        </td>
+        <td>
+          <!-- ショッピングカートをクリア -->
+          <a href="delete?id=1">クリア</a>
+        </td>
+      </tr>
+    <% } %>
   </table>
 
   <a href="/shop/cashresister/index">レジへ</a>

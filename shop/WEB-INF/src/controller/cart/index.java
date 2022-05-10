@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import service.CartService;
 
 @WebServlet("/cart/index")
 public class index extends HttpServlet {
@@ -17,6 +18,8 @@ public class index extends HttpServlet {
     request.setCharacterEncoding("UTF-8");
 
     // 処理
+    CartService cartService = new CartService(request);
+    cartService.getAllItems();
 
     getServletContext()
       .getRequestDispatcher("/resources/jsp/cart/index.jsp")

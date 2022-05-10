@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import service.CartService;
 
 @WebServlet("/cart/add")
 public class add extends HttpServlet {
@@ -16,9 +17,8 @@ public class add extends HttpServlet {
     response.setContentType("text/html; charset=UTF-8");
     request.setCharacterEncoding("UTF-8");
 
-    String id = request.getParameter("id");
-
-    System.out.println("商品ID: " + id);
+    CartService cartService = new CartService(request);
+    cartService.addItemToCart();
 
     response.sendRedirect("index");
   }

@@ -1,6 +1,11 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+
 <%@ page import="java.util.List" %>
+<%@ page import="java.util.Map" %>
+
 <%@ page import="entity.Item" %>
+<%@ page import="entity.CartItem" %>
+
 <% request.setCharacterEncoding("UTF-8"); %>
 
 <!DOCTYPE html>
@@ -15,7 +20,10 @@
 <body>
   <h1>Index</h1>
 
-  <% List<Item> items = (List<Item>)request.getAttribute("items"); %>
+  <%
+    List<Item> items = (List<Item>)request.getAttribute("itemsList");
+    Map<String, CartItem> cartItems = (Map<String, CartItem>)request.getAttribute("cartItemsMap");
+  %>
   <table>
     <tr>
       <th>商品名</th>
@@ -36,7 +44,8 @@
         </td>
         <td>
           <!-- 個数を出力 -->
-          3個
+          <% CartItem cartItem = cartItems.get(item.getId()); %>
+          <%= cartItem == null ? 0 : cartItem.getCount() %>個
         </td>
         <td>
           <!-- ショッピングカートへ追加 -->

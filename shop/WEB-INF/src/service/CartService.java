@@ -1,9 +1,13 @@
 package service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import entity.CartItem;
 import entity.Item;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import repository.ItemRepository;
 
 public class CartService {
@@ -16,7 +20,23 @@ public class CartService {
   }
 
   public void getAllItems() {
-    List<Item> items = itemRepository.selectAllItems();
-    request.setAttribute("items", items);
+    List<Item> itemsList = itemRepository.selectAllItems();
+
+    Map<String, CartItem> cartItemsMap = getCartItemsAsMap();
+
+    request.setAttribute("itemsList", itemsList);
+    request.setAttribute("cartItemsMap", cartItemsMap);
+  }
+
+
+  // Use session to retrieve items in the current cart and return them in a map
+  private Map<String, CartItem> getCartItemsAsMap() {
+    HttpSession session = request.getSession(true);
+    Object items = session.getAttribute("cart");
+    if (items == null) {
+      return new HashMap<String, CartItem>();
+    } else {
+      return (Map<String, CartItem>)items;
+    }
   }
 }

@@ -13,8 +13,12 @@
 <body>
   <h1>Complete</h1>
 
+  <%
+    int totalPrice = (int)request.getAttribute("totalPrice");
+  %>
+
   <p>ご購入ありがとうございました！</p>
-  <p>合計金額：300円</p>
+  <p>合計金額：<%= totalPrice %>円</p>
 
   <a href="/shop/cart/index">戻る</a>
 </body>

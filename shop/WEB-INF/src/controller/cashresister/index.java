@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import service.CashresisterService;
 
 @WebServlet("/cashresister/index")
 public class index extends HttpServlet {
@@ -16,7 +17,8 @@ public class index extends HttpServlet {
     response.setContentType("text/html; charset=UTF-8");
     request.setCharacterEncoding("UTF-8");
 
-    // 処理
+    CashresisterService cashresisterService = new CashresisterService(request);
+    cashresisterService.getCartItemsInfo();
 
     getServletContext()
       .getRequestDispatcher("/resources/jsp/cashresister/index.jsp")

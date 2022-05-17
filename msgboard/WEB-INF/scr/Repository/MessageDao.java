@@ -39,12 +39,12 @@ public class MessageDao {
       con = ds.getConnection();
 
       // SQLの実行
-      pstmt = con.prepareStatement("select * from city");
+      pstmt = con.prepareStatement("select * from sample");
       rs = pstmt.executeQuery();
 
       // Viewへ引き渡す値を設定
       rs.next();
-      data.put("no1", rs.getString("ID"));
+      data.put("no1", rs.getString("id"));
     } catch (Exception e) {
       System.out.println(e.getMessage());
       throw new ServletException(e);

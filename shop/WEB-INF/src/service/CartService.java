@@ -20,7 +20,6 @@ public class CartService {
     cartItemUtility = new CartItemUtility(this.request);
   }
 
-  
 
   public void getAllItems() {
     List<Item> itemsList = itemRepository.selectAllItems();

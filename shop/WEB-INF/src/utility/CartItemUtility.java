@@ -30,7 +30,7 @@ public class CartItemUtility {
     if (items == null) {
       return new HashMap<String, CartItem>();
     } else {
-      return (Map<String, CartItem>) items;
+      return (Map<String, CartItem>)items;
     }
   }
 

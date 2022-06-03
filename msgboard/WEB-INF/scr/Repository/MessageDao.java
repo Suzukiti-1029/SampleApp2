@@ -1,16 +1,13 @@
 package Repository;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.sql.DataSource;
 
 import Entity.Message;
 import jakarta.servlet.ServletException;
@@ -20,7 +17,6 @@ public class MessageDao {
   public MessageDao() {
   }
 
-  private static final long serialVersionUID = 1L;
   // 仮DB
   private static List<Message> messages = new ArrayList<Message>();
 
@@ -31,22 +27,24 @@ public class MessageDao {
     Map<String, Object> data = new HashMap<String, Object>();
 
     try {
-      // データソースの取得
-      Context ctx = new InitialContext();
-      DataSource ds = (DataSource)ctx.lookup("java:comp/env/mysql-jdbc");
-
+      Class.forName("com.mysql.jdbc.Driver");
       // データベースへ接続
-      con = ds.getConnection();
+      con = DriverManager.getConnection(
+        "jdbc:mysql://msgboard-mysql-docker:3306/sample",
+        "root",
+        "256133"
+      );
 
       // SQLの実行
-      pstmt = con.prepareStatement("select * from sample");
+      pstmt = con.prepareStatement("select id,name from test");
       rs = pstmt.executeQuery();
 
       // Viewへ引き渡す値を設定
-      rs.next();
-      data.put("no1", rs.getString("id"));
+      while (rs.next()) {
+        data.put("id", rs.getInt("id"));
+        data.put("name", rs.getString("name"));
+      }
     } catch (Exception e) {
-      System.out.println(e.getMessage());
       throw new ServletException(e);
     } finally {
       try {

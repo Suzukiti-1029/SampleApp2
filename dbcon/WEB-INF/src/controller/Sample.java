@@ -28,12 +28,12 @@ public class Sample extends HttpServlet {
 //          .newInstance();
       
       Connection con = DriverManager.getConnection(
-        "jdbc:mysql://dbcon-mysql:3306/sample",
+        "jdbc:mysql://dbcon-mysql:3306/sampledb",
         "root",
         "pass"
       );
       Statement statement = con.createStatement();
-      ResultSet rs = statement.executeQuery("select id, name from test");
+      ResultSet rs = statement.executeQuery("select id, name from testtable");
       while (rs.next()) {
         a += rs.getInt("id") + ":" + rs.getString("name");
       }

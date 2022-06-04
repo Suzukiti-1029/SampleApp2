@@ -3,7 +3,7 @@
   "dockerComposeFile": ["./docker-compose.yml"],
   "service": "app",
   "workspaceFolder": "/usr/local/tomcat/",
-  "forwardPorts": ["8080:8080", "3306:3306"],
+  "forwardPorts": ["8080:8080"],
   "extensions": [
     "vscjava.vscode-java-pack", // Java全般
     "formulahendry.vscode-mysql", // MYSQL

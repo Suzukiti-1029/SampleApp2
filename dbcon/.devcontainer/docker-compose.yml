@@ -2,13 +2,13 @@ version: '3'
 
 services:
   db:
-    image: mysql:5.7
+    build: ./mysql/
+    # image: mysql:5.7
     container_name: dbcon-mysql
     environment:
       MYSQL_ROOT_PASSWORD: pass
     ports:
       - 3306:3306
-    restart: always
 
   app:
     build: ./tomcat/

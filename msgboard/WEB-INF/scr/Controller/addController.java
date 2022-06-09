@@ -14,9 +14,6 @@ public class addController extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response)
   throws IOException, ServletException {
-    response.setContentType("text/html; charset=UTF-8");
-    request.setCharacterEncoding("UTF-8");
-
     messageService service = new messageService();
     service.addMessages(request);
 

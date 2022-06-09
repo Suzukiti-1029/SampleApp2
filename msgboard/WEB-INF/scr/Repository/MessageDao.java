@@ -32,7 +32,8 @@ public class MessageDao {
       );
 
       // SQLの実行
-      pstmt = con.prepareStatement("select created_at, title, contents from messages");
+      String sql = "select created_at, title, contents from messages order by id desc";
+      pstmt = con.prepareStatement(sql);
       rs = pstmt.executeQuery();
 
       // Viewへ引き渡す値を設定

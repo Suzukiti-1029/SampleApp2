@@ -1,6 +1,4 @@
 FROM tomcat:10.1.0-jdk17
-RUN mv /usr/local/tomcat/webapps.dist/host-manager /usr/local/tomcat/webapps/host-manager
-RUN mv /usr/local/tomcat/webapps.dist/manager /usr/local/tomcat/webapps/manager
 RUN rm -r /usr/local/tomcat/webapps.dist
 RUN mkdir /usr/local/tomcat/webapps/msgboard
 

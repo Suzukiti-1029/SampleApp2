@@ -9,9 +9,7 @@
     "formulahendry.vscode-mysql", // MYSQL
     "pthorsson.vscode-jsp", // JSP用
     "streetsidesoftware.code-spell-checker", // スペルミス防止
-    "mhutchie.git-graph", // Git見やすく
-    "eamodio.gitlens-insiders", // Git見やすく
     "oderwat.indent-rainbow", // インデントわかりやすく
-    "mosapride.zenkaku", // 不必要なミス防止
+    "mosapride.zenkaku" // 不必要なミス防止
   ]
 }

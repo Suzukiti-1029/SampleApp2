@@ -29,7 +29,7 @@
   %>
   <% for(Message msg: messages) { %>
     <div>
-      <%= new SimpleDateFormat("yyyy/MM/dd HH:ss:mm").format(msg.getDate()) %>
+      <%= new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(msg.getDate()) %>
       <%= msg.getTitle() %>
       <div>
         <%= msg.getContents().replace("\n", "<br>") %>

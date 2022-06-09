@@ -1,0 +1,15 @@
+{
+  "name": "dbcon",
+  "dockerComposeFile": ["./docker-compose.yml"],
+  "service": "app",
+  "workspaceFolder": "/usr/local/tomcat/",
+  "forwardPorts": ["8080:8080"],
+  "extensions": [
+    "vscjava.vscode-java-pack", // Java全般
+    "formulahendry.vscode-mysql", // MYSQL
+    "pthorsson.vscode-jsp", // JSP用
+    "streetsidesoftware.code-spell-checker", // スペルミス防止
+    "oderwat.indent-rainbow", // インデントわかりやすく
+    "mosapride.zenkaku" // 不必要なミス防止
+  ]
+}
